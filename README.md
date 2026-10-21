@@ -1,4 +1,5 @@
-<p align="center"><img src="assets/shu_logo.png" height="72"> &nbsp; <img src="assets/anima_logo.png" height="72"></p>
+<p align="center"><a href="https://shuhq.com"><img src="assets/shu_logo.png" height="96"></a> &nbsp;&nbsp; <a href="https://shuhq.com"><img src="assets/anima_logo.png" height="56"></a></p>
+<p align="center"><a href="https://shuhq.com">shuhq.com</a> &nbsp;·&nbsp; <a href="https://x.com/ShuHQcom">@ShuHQcom</a> &nbsp;·&nbsp; <a href="https://github.com/shu2600">More From Shu On GitHub</a></p>
 
 # Shu's DLSS 5 Switch
 

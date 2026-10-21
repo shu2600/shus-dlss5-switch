@@ -96,7 +96,7 @@ class App(tk.Tk):
             tk.Label(head, image=self.img("shu_logo_ui.png"), bg=BG).pack(side="left", padx=(0, 18))
         titles = tk.Frame(head, bg=BG)
         titles.pack(side="left")
-        tk.Label(titles, text="DLSS 5 Switch", bg=BG, fg=FG, font=(F, 30, "bold")).pack(anchor="w")
+        tk.Label(titles, text="Shu's DLSS 5 Switch", bg=BG, fg=FG, font=(F, 30, "bold")).pack(anchor="w")
         tk.Label(titles, text="Turn DLSS 5 On For Your Games. One Switch Each.", bg=BG, fg=MUTED, font=(F, 14)).pack(anchor="w")
         right = tk.Frame(head, bg=BG)
         right.pack(side="right")

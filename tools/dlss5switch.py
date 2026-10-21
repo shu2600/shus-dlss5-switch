@@ -56,7 +56,7 @@ class App(tk.Tk):
         self.games: list[core.Game] = []
         self.gpu: dict = {}
         self.busy: set[str] = set()
-        self.tuning: set[str] = set()
+        self.tuning: set[str] = set(sys.argv[sys.argv.index("--tune") + 1:][:1]) if "--tune" in sys.argv else set()
         self.show_cant = False
         self.scanning = True
         self.imgs: dict[str, tk.PhotoImage] = {}
@@ -133,11 +133,11 @@ class App(tk.Tk):
         foot = tk.Frame(self, bg=PANEL)
         foot.pack(fill="x", side="bottom")
         inner = tk.Frame(foot, bg=PANEL)
-        inner.pack(fill="x", padx=32, pady=10)
+        inner.pack(fill="x", padx=32, pady=(10, 4))
         tk.Label(inner, text="In Game:  Set The Upscaler To DLSS   ·   F10 Flicks DLSS 5 On And Off   ·   Insert Opens The Overlay",
                  bg=PANEL, fg=FG, font=(F, 13)).pack(side="left")
-        credit = tk.Frame(inner, bg=PANEL)
-        credit.pack(side="right")
+        credit = tk.Frame(foot, bg=PANEL)
+        credit.pack(fill="x", padx=32, pady=(0, 10))
         for n in ("shu_logo_small.png", "anima_logo_small.png"):
             if self.img(n):
                 tk.Label(credit, image=self.img(n), bg=PANEL).pack(side="left", padx=4)

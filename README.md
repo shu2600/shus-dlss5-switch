@@ -7,6 +7,8 @@
 
 I Wanted DLSS 5 In The Games I Already Own, Without Running A Mystery Exe From A Four-Day-Old Repo Or Downloading NVIDIA Files From Who Knows Where. So We Built The Safe Version: It Looks At Your Games, Tells You Straight Which Ones Can Take DLSS 5 And Which Can't (And Why), And Puts Everything Back When You Turn It Off.
 
+<p align="center"><img src="docs/screenshots/1_switch.png" width="860"></p>
+
 ## How It Works
 
 1. Run `setup.bat`. It installs Python if your PC doesn't have it, then opens the Switch.
@@ -15,6 +17,8 @@ I Wanted DLSS 5 In The Games I Already Own, Without Running A Mystery Exe From A
 4. Flick The Switch On A Ready Game. Launch It, Set The Game's Upscaler To **DLSS**, And You're In.
 5. In Game: **F10** Flicks DLSS 5 On And Off So You Can Compare. **Insert** Opens The Overlay, Which Says Why If It Can't Run.
 6. Back In The Switch, **Detail** And **Colour** Sliders Tune Each Game.
+
+<p align="center"><img src="docs/screenshots/2_fine_tune.png" width="760"><br><sub>Fine Tune: Detail And Colour Per Game</sub></p>
 
 ## What Makes It Different
 

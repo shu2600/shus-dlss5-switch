@@ -1,0 +1,20 @@
+{
+  "_about": "Known games. 'folder' = where the game's exe sits, relative to the install folder (only needed when it isn't found automatically). 'status': works = tested and working, blocked = never touch. Everything else is worked out from the game's own files.",
+  "games": [
+    {"match": "Cyberpunk 2077", "folder": "bin/x64"},
+    {"match": "The Witcher 3", "folder": "bin/x64_dx12"},
+    {"match": "Kingdom Come Deliverance II"},
+    {"match": "Crimson Desert"},
+    {"match": "HITMAN"},
+    {"match": "Baldur's Gate 3", "folder": "bin"},
+    {"match": "Crysis Remastered", "folder": "Bin64"},
+    {"match": "Dead Rising Deluxe Remaster"},
+    {"match": "EA SPORTS FC", "status": "blocked", "why": "Javelin kernel anti-cheat: touching it could get your EA account banned"},
+    {"match": "Battlefield 6", "status": "blocked", "why": "Javelin kernel anti-cheat: touching it could get your EA account banned"},
+    {"match": "Call of Duty", "status": "blocked", "why": "Ricochet kernel anti-cheat: touching it could get you banned"},
+    {"match": "ARC Raiders", "status": "blocked", "why": "Anti-cheat: touching it could get you banned"},
+    {"match": "Grand Theft Auto V", "status": "blocked", "why": "BattlEye anti-cheat: touching it could get you banned"},
+    {"match": "ELDEN RING", "status": "blocked", "why": "Easy Anti-Cheat: touching it could get you banned"},
+    {"match": "The First Descendant", "status": "blocked", "why": "Anti-cheat: touching it could get you banned"}
+  ]
+}

@@ -37,7 +37,9 @@ I Wanted DLSS 5 In The Games I Already Own, Without Running A Mystery Exe From A
 
 ## Games
 
-The Switch Works It Out From Each Game's Own Files: Does It Have DLSS, Is There Anti-Cheat, Where Is The Real Exe. `tools/games.json` Holds The Few Games That Need A Nudge (Like Cyberpunk 2077's `bin\x64`) And The Ones That Are Always Blocked. Tested On Our PC: Cyberpunk 2077. Tell Us How Yours Go.
+The Switch Works It Out From Each Game's Own Files: Does It Have DLSS, Is There Anti-Cheat, Where Is The Real Exe. `tools/games.json` Holds The Few Games That Need A Nudge (Like Cyberpunk 2077's `bin\x64`) And The Ones That Are Always Blocked.
+
+This Is v1.0 And It's Brand New, So Tell Us How Your Games Go. Open An Issue With The Game, Your Card, And What The Overlay Said, And We'll Add It To The List.
 
 ## Good To Know
 

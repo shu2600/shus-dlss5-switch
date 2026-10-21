@@ -26,4 +26,8 @@ rem a fresh install isn't on this window's PATH yet
 set "PATH=%PYL%;%PATH%"
 
 :havepy
+rem Desktop shortcut, made once
+set "LNK=%USERPROFILE%\Desktop\Shu's DLSS 5 Switch.lnk"
+set "APPDIR=%~dp0"
+if not exist "%LNK%" powershell -NoProfile -Command "$w=New-Object -ComObject WScript.Shell; $s=$w.CreateShortcut($env:LNK); $s.TargetPath=(Get-Command pyw).Source; $s.Arguments=[char]34+$env:APPDIR+'tools\dlss5switch.py'+[char]34; $s.WorkingDirectory=$env:APPDIR; $s.IconLocation=$env:SystemRoot+'\System32\imageres.dll,186'; $s.Description='Flick DLSS 5 on and off per game'; $s.Save()"
 start "" pyw tools\dlss5switch.py

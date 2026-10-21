@@ -351,8 +351,20 @@ def find_model(games: list[Game], progress=None) -> dict | None:
                 seen.add(str(p).lower())
                 s = signature(p)
                 if s["ok"]:
-                    return {"path": str(p), "from": g.name, "version": s["version"], "sha256": sha256(p)}
+                    return keep_model(p, g.name, s["version"])
     return None
+
+
+def keep_model(p: Path, source: str, version: str) -> dict:
+    """Keep the Switch's own copy of the user's signed model, so turning a game off can never take it away."""
+    dest = HOME / "model" / MODEL
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    h = sha256(p)
+    if not dest.is_file() or sha256(dest) != h:
+        shutil.copy2(p, dest)
+    if sha256(dest) != h or not signature(dest)["ok"]:
+        raise RuntimeError("Couldn't keep a clean copy of the DLSS 5 model")
+    return {"path": str(dest), "from": source, "version": version, "sha256": h}
 
 
 def model_from_file(p: Path) -> dict:
@@ -364,7 +376,7 @@ def model_from_file(p: Path) -> dict:
     if not s["ok"]:
         raise RuntimeError("That file isn't NVIDIA's signed DLSS 5 model "
                            f"(signature: {s['status'] or 'none'}, description: {s['description'] or 'none'}), so it won't be used.")
-    return {"path": str(p), "from": p.parent.name, "version": s["version"], "sha256": sha256(p)}
+    return keep_model(p, p.parent.name, s["version"])
 
 
 def sha256(p: Path) -> str:

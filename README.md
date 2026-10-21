@@ -1,5 +1,5 @@
 <p align="center"><a href="https://shuhq.com"><img src="assets/shu_logo.png" height="96"></a> &nbsp;&nbsp; <a href="https://shuhq.com"><img src="assets/anima_logo.png" height="56"></a></p>
-<p align="center"><a href="https://shuhq.com">shuhq.com</a> &nbsp;·&nbsp; <a href="https://x.com/ShuHQcom">@ShuHQcom</a> &nbsp;·&nbsp; <a href="https://github.com/shu2600">More From Shu On GitHub</a> &nbsp;·&nbsp; <a href="https://www.patreon.com/cw/Shu2600">Support Me On Patreon</a></p>
+<p align="center"><a href="https://shuhq.com">shuhq.com</a> &nbsp;·&nbsp; <a href="https://x.com/ShuHQcom">@ShuHQcom</a> &nbsp;·&nbsp; <a href="https://github.com/shu2600">More From Shu On GitHub</a> &nbsp;·&nbsp; <a href="https://www.patreon.com/cw/Shu2600">Support Me On Patreon</a> &nbsp;·&nbsp; <a href="https://buymeacoffee.com/Shu2600">Buy Me a Coffee</a></p>
 
 # Shu's DLSS 5 Switch
 
@@ -54,4 +54,4 @@ DLSS 5 Here Runs Through Software NVIDIA Doesn't Officially Support Outside Its 
 
 Built By Shu And Anima. The Engine Is Dagherbou's [OptiScaler_DLSSNR](https://github.com/Dagherbou/OptiScaler_DLSSNR) (GPL-3.0), Built On [OptiScaler](https://github.com/optiscaler/OptiScaler), With Colour Work From [RenoDX](https://github.com/clshortfuse/renodx). DLSS And NVIDIA Are Trademarks Of NVIDIA Corporation. Full List: [CREDITS.md](CREDITS.md).
 
-More From Us: [shuhq.com](https://shuhq.com) &nbsp;·&nbsp; [Patreon](https://www.patreon.com/cw/Shu2600) &nbsp;·&nbsp; [Shu's LaunchBox 4K CRT Build](https://github.com/shu2600/shus-launchbox-4k-crt-build) &nbsp;·&nbsp; [Shu's Steam Deck CRT Build](https://github.com/shu2600/shus-steam-deck-crt-build)
+More From Us: [shuhq.com](https://shuhq.com) &nbsp;·&nbsp; [Patreon](https://www.patreon.com/cw/Shu2600) &nbsp;·&nbsp; [Buy Me a Coffee](https://buymeacoffee.com/Shu2600) &nbsp;·&nbsp; [Shu's LaunchBox 4K CRT Build](https://github.com/shu2600/shus-launchbox-4k-crt-build) &nbsp;·&nbsp; [Shu's Steam Deck CRT Build](https://github.com/shu2600/shus-steam-deck-crt-build)

@@ -20,6 +20,18 @@ I Wanted DLSS 5 In The Games I Already Own, Without Running A Mystery Exe From A
 
 <p align="center"><img src="docs/screenshots/2_fine_tune.png" width="760"><br><sub>Fine Tune: Detail And Colour Per Game</sub></p>
 
+## New In v2: Three More Tabs
+
+**Newest DLSS.** Your NVIDIA Driver Keeps The Newest DLSS. One Click Makes Every Game That Has DLSS Use It, With NVIDIA's Recommended Preset, For Upscaling, Ray Reconstruction And Frame Generation. It's The Driver's Own Feature, Set Through [NVIDIA Profile Inspector](https://github.com/Orbmu2k/nvidiaProfileInspector) (Downloaded Once From Its GitHub And Checked By Its Fingerprint). Your Settings Are Backed Up First, And **Undo** Puts Them Back.
+
+**Desktop Icons.** Windows Loves To Break Game Icons. This Gives Every Game Shortcut On Your Desktop A Big, Matching Icon That Updates Can't Break. It Uses, In Order: Your Own Pick, The Best-Voted Icon On [SteamGridDB](https://www.steamgriddb.com) (With Your Own Free Key, Every Artist Credited), Steam's Library Art Already On Your PC, Or The Game's Own Icon Made Big. Your Old Shortcuts Are Backed Up; **Put My Old Icons Back** Restores Them.
+
+<p align="center"><img src="docs/screenshots/4_newest_dlss.png" width="760"><br><sub>Newest DLSS: One Click, Undo Any Time</sub></p>
+
+<p align="center"><img src="docs/screenshots/5_desktop_icons.png" width="760"><br><sub>Desktop Icons: Big, Matching, Credited</sub></p>
+
+**Games Folder.** A Games Folder On Your Desktop With A Proper Gaming Icon Of Your Choice. We Point You To A Lovely Free One, You Pick The File, It's Done. **Put It Back** Undoes It.
+
 ## What Makes It Different
 
 **It Never Ships Or Downloads NVIDIA's Model.** DLSS 5's Model (`nvngx_dlssnr.dll`, About 165 MB) Is NVIDIA's, And It Isn't Ours To Hand Out. The Switch Finds The Copy Already On Your PC, Inside A Game That Ships DLSS 5, Checks NVIDIA's Digital Signature On It, And Refuses Anything That's Been Modified. You Can Also Point It At The File Yourself With **Pick The File**.
@@ -44,7 +56,7 @@ I Wanted DLSS 5 In The Games I Already Own, Without Running A Mystery Exe From A
 
 The Switch Works It Out From Each Game's Own Files: Does It Have DLSS, Is There Anti-Cheat, Where Is The Real Exe. `tools/games.json` Holds The Few Games That Need A Nudge (Like Cyberpunk 2077's `bin\x64`) And The Ones That Are Always Blocked.
 
-This Is v1.0 And It's Brand New, So Tell Us How Your Games Go. Open An Issue With The Game, Your Card, And What The Overlay Said, And We'll Add It To The List.
+This Is v2.0, So Tell Us How Your Games Go. Open An Issue With The Game, Your Card, And What The Overlay Said, And We'll Add It To The List.
 
 ## Good To Know
 

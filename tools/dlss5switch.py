@@ -104,10 +104,28 @@ class App(tk.Tk):
             tk.Label(right, image=self.img("anima_logo_ui.png"), bg=BG).pack(anchor="e")
         self.link(right, "shuhq.com", SITE).pack(anchor="e", pady=(6, 0))
 
-        self.setup = tk.Frame(self, bg=BG)
+        # v2: four tabs. The DLSS 5 switches are the first; the rest live in extras_ui.
+        tabs = tk.Frame(self, bg=BG)
+        tabs.pack(fill="x", padx=32, pady=(14, 0))
+        self.tab_btns: dict[str, tk.Label] = {}
+        for key, label in (("switch", "DLSS 5"), ("newest", "Newest DLSS"), ("icons", "Desktop Icons"), ("folder", "Games Folder")):
+            b = tk.Label(tabs, text=label, bg=BG, fg=MUTED, font=(F, 15, "bold"), padx=18, pady=10, cursor="hand2")
+            b.bind("<Button-1>", lambda _e, k=key: self.show_tab(k))
+            b.pack(side="left")
+            self.tab_btns[key] = b
+        tk.Frame(self, bg=PANEL, height=2).pack(fill="x", padx=32)
+
+        self.pages: dict[str, tk.Frame] = {}
+        page = tk.Frame(self, bg=BG)
+        self.pages["switch"] = page
+        import extras_ui
+        for key in ("newest", "icons", "folder"):
+            self.pages[key] = extras_ui.build(self, key)
+
+        self.setup = tk.Frame(page, bg=BG)
         self.setup.pack(fill="x", padx=32, pady=(14, 6))
 
-        bar = tk.Frame(self, bg=BG)
+        bar = tk.Frame(page, bg=BG)
         bar.pack(fill="x", padx=32, pady=(8, 6))
         tk.Label(bar, text="\U0001F50E", bg=BG, fg=MUTED, font=(F, 14)).pack(side="left")
         e = tk.Entry(bar, textvariable=self.filter, bg=PANEL, fg=FG, insertbackground=FG, relief="flat", font=(F, 15), width=26)
@@ -117,7 +135,7 @@ class App(tk.Tk):
         self.status = tk.Label(bar, text="", bg=BG, fg=MUTED, font=(F, 13))
         self.status.pack(side="right")
 
-        wrap = tk.Frame(self, bg=BG)
+        wrap = tk.Frame(page, bg=BG)
         wrap.pack(fill="both", expand=True, padx=32, pady=(4, 4))
         self.canvas = tk.Canvas(wrap, bg=BG, highlightthickness=0)
         sb = tk.Scrollbar(wrap, orient="vertical", command=self.canvas.yview)
@@ -145,6 +163,16 @@ class App(tk.Tk):
         self.link(credit, "shuhq.com", SITE, bg=PANEL, size=12).pack(side="left")
         tk.Label(credit, text=" · ", bg=PANEL, fg=MUTED, font=(F, 12)).pack(side="left")
         self.link(credit, "GitHub", GITHUB, bg=PANEL, size=12).pack(side="left")
+        self.foot_tip = inner
+        start = sys.argv[sys.argv.index("--tab") + 1] if "--tab" in sys.argv[:-1] else "switch"
+        self.show_tab(start if start in self.pages else "switch")
+
+    def show_tab(self, key: str):
+        for k, p in self.pages.items():
+            p.pack_forget()
+            self.tab_btns[k].configure(fg=MUTED, bg=BG)
+        self.pages[key].pack(fill="both", expand=True, before=self.foot_tip.master)
+        self.tab_btns[key].configure(fg=FG, bg=PANEL)
 
     # ------------------------------------------------------------ getting set up
     def all_set(self) -> bool:

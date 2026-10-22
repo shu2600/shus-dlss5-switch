@@ -26,6 +26,9 @@ rem a fresh install isn't on this window's PATH yet
 set "PATH=%PYL%;%PATH%"
 
 :havepy
+rem v2: Pillow and icoextract make the Desktop Icons and Games Folder tabs work (the DLSS 5 switches don't need them)
+py -m pip install --user --quiet --disable-pip-version-check pillow icoextract
+
 rem Desktop shortcut, made once
 set "LNK=%USERPROFILE%\Desktop\Shu's DLSS 5 Switch.lnk"
 set "APPDIR=%~dp0"
